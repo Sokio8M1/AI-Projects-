@@ -1,0 +1,32 @@
+# This is the requirements file for the voice assistant project.
+# It lists all the necessary Python packages and their versions needed to run the project.
+# This is required to make sure that the project works correctly in a differnt machine without any need to scavenge for dependencies.
+# You can install these packages using pip:
+# pip install -r requirements2.txt
+
+pyttsx4==3.0.15
+SpeechRecognition==3.14.3
+wikipedia==1.4.0
+PyAudio==0.2.14
+webbrowser==0.0.0
+smtplib==0.0.1
+pyobjc-framework-WebKit==8.5
+threading==0.0.1
+json==2.0.9
+datetime==4.3
+pywin32==311
+PyAutoGUI==0.9.54
+pydub==0.25.1
+gTTS==2.5.4
+googlesearch-python==1.2.3
+requests==2.32.3
+beautifulsoup4==4.13.4
+os # Note: 'os' is a built-in module and does not need to be installed via pip.
+requests==2.32.3
+re # Note: 're' is a built-in module and does not need to be installed via pip.
+
+
+
+# Note: Some packages may require additional system dependencies.
+
+# Removed duckduckgo_search and added webbrowser, smtplib, threading, json, datetime, pyobjc-framework-WebKit

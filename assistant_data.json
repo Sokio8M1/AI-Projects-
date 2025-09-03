@@ -1,0 +1,54 @@
+{
+  "reminders": [
+    {
+      "time": "2025-09-04 07:00",
+      "message": "fuck you"
+    }
+  ],
+  "tasks": [
+    {
+      "task": "going to gym",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "taking medicine",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "going to cycle",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "to fuck her",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "to fuck your mum",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "nothing",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "none",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "nothing",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "none",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "none",
+      "date": "2025-09-03"
+    },
+    {
+      "task": "groceries tomorrow at 10:00 in the morning",
+      "date": "2025-09-03"
+    }
+  ]
+}

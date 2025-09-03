@@ -1,0 +1,20 @@
+{
+  "_comment": "Emergency contacts list. Replace numbers with real ones in +91 format or international format.",
+  
+  "family": {
+    "name": "Rogo",
+    "phone": "+916289986845"
+  },
+  "doctor": {
+    "name": "Dr. Sharma",
+    "phone": "+919876543210"
+  },
+  "neighbor": {
+    "name": "Mr. Verma",
+    "phone": "+911112223334"
+  },
+  "emergency services": {
+    "name": "Ambulance / Emergency",
+    "phone": "102"
+  }
+}
