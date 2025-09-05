@@ -1,5 +1,9 @@
-REM Code viewers, just so you know , this is a batch script to run the voice assistant project.
 @echo off
-echo Starting your Voice Assistant...
+REM Auto-activate venv and run assistant.py (Windows)
+
+if exist ".venv\Scripts\activate.bat" (
+    call .venv\Scripts\activate
+)
+
 python assistant.py
 pause
