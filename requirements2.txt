@@ -1,32 +1,27 @@
 # This is the requirements file for the voice assistant project.
 # It lists all the necessary Python packages and their versions needed to run the project.
-# This is required to make sure that the project works correctly in a differnt machine without any need to scavenge for dependencies.
 # You can install these packages using pip:
 # pip install -r requirements2.txt
 
 pyttsx4==3.0.15
 SpeechRecognition==3.14.3
 wikipedia==1.4.0
-PyAudio==0.2.14
-webbrowser==0.0.0
-smtplib==0.0.1
-pyobjc-framework-WebKit==8.5
-threading==0.0.1
-json==2.0.9
-datetime==4.3
-pywin32==311
-PyAutoGUI==0.9.54
-pydub==0.25.1
-gTTS==2.5.4
-googlesearch-python==1.2.3
+openai==0.27.8            # For using Gpt models 3.5/4
+        # Note: Not a real package, webbrowser is built-in
+         # Note: Not a real package, smtplib is built-in
+# pyobjc-framework-WebKit==8.5 # Only needed for macOS
+        # Note: Not a real package, threading is built-in
+                 # Note: Not a real package, json is built-in
+            # Note: Not a real package, datetime is built-in
+pywin32==311                 # Only needed for Windows features (optional)
+PyAutoGUI==0.9.54            # Optional: for GUI automation
+pydub==0.25.1                # Optional: for audio manipulation
+gTTS==2.5.4                  # Google Text-to-Speech
+googlesearch-python==1.2.3   # Google search library
 requests==2.32.3
-beautifulsoup4==4.13.4
-os # Note: 'os' is a built-in module and does not need to be installed via pip.
-requests==2.32.3
-re # Note: 're' is a built-in module and does not need to be installed via pip.
+beautifulsoup4==4.13.4                 
+transformers==4.55.2
+# Note: Not a real package, re is built-in
 
-
-
-# Note: Some packages may require additional system dependencies.
-
-# Removed duckduckgo_search and added webbrowser, smtplib, threading, json, datetime, pyobjc-framework-WebKit
+# Note: Packages marked 'built-in' do not need to be installed via pip; remove them if you get install errors.
+# Only keep packages here that actually install via pip and are required by your project.
