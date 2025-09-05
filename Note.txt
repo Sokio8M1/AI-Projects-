@@ -1,0 +1,3 @@
+Hi it's me Bhaswar, this is not the final repo. Honestly I have made many changes after this repo like vesion_3,version_4...11 final one which has open Ai and Gemini Models this is previously here so why not give you this one to see.
+In this .py , I have used scripted response you can see that one.
+I named this Jarvis just for fun but lately I noticed the sample version provided in the cookbook was also named "Jarvis A.I" Lol....
