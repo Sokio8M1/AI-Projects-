@@ -3,7 +3,6 @@ import speech_recognition as sr
 import datetime
 import wikipedia
 import webbrowser
-webbrowser.open("https://www.google.com")
 import json
 import threading
 import time
@@ -26,9 +25,12 @@ def wish_user():
         speak("Good Morning!")
     elif 12 <= hour < 18:
         speak("Good Afternoon!")
-    else:
+    elif: 18 <= hour < 22:
         speak("Good Evening!")
-        speak("I am Jarvis Sir. Please tell me how may I help you")
+    elif: 12 <= hour <=24:
+        speak("It's late sir, are u planning to pull an all nighter!?")
+    
+        
         
 # ========== TESTER CHECKER ==========
 def check_if_tester():
@@ -38,7 +40,7 @@ def check_if_tester():
     if "yes" in answer:
         speak("Thank you for testing this assistant. Please share your views and suggestions after using it. Your feedback will help improve the project.")
         speak("A note from Sir: This project is still in its early stages and may have bugs. Please be patient and report any issues you encounter.")
-        speak("Hello its me the coder , Bhaswar. So as you are a tester , Jarvis is going to guide you on how to use this assistant.     Hi Jarvis speaking , you can ask me to search anything on wikipedia by saying 'wikipedia' followed by the topic. You can also ask me to search anything on google by saying 'search' followed by the topic but I dont recite that . You can set reminders by saying 'set reminder' or 'remind me'. You can record tasks by saying 'record this task' or 'record this as a task'. You can ask me to list your tasks by saying 'tasks' or 'say what I have to do for today'. You can shift tasks by saying 'move task' or 'shift task' although the reminder feature is currently in dev mode and may not function perfectly. You can also ask me the current time by saying 'time' and the current date by saying 'date'. You can send emails by saying 'send email' but keep in mind it requires your account setup. If you want to exit, just say 'exit', 'quit', 'close', or 'stop'. I hope you have a great experience using this assistant. Thank you!")
+        speak("Hello its me the coder , Bha... uh, Rogo. So as you are a tester , Jarvis is going to guide you on how to use this assistant.       Hi Jarvis speaking , you can ask me to search anything on wikipedia by saying 'wikipedia' followed by the topic. You can also ask me to search anything on google by saying 'search' followed by the topic but I dont recite that . You can set reminders by saying 'set reminder' or 'remind me'. You can record tasks by saying 'record this task' or 'record this as a task'. You can ask me to list your tasks by saying 'tasks' or 'say what I have to do for today'. You can shift tasks by saying 'move task' or 'shift task' although the reminder feature is currently in dev mode and may not function perfectly. You can also ask me the current time by saying 'time' and the current date by saying 'date'. You can send emails by saying 'send email' but keep in mind it requires your account setup. If you want to exit, just say 'exit', 'quit', 'close', or 'stop'. I hope you have a great experience using this assistant. Thank you!")
     elif "no" in answer:
         speak("Welcome back sir. How can I assist you today?")
     else:
@@ -231,6 +233,7 @@ def list_tasks(date=None):
 
     if not tasks_today:
         speak("You have no tasks for today.")
+        speak("Why not relax and take a break Sir?")
     else:
         speak("Your tasks for today are:")
         for idx, t in enumerate(tasks_today, 1):
@@ -266,6 +269,7 @@ def shift_task(task_number, new_date, new_time=None):
         speak(msg)
     else:
         speak("Invalid task number.")
+        speak("Bother to try again Sir? , or do anything else")
 
 # ========== WIKI SEARCH ==========
 def wiki_search(topic):
@@ -276,15 +280,18 @@ def wiki_search(topic):
         speak(results)
     except Exception:
         speak("Sorry sir, I could not fetch information from Wikipedia.")
+        speak("Bother to try again Sir? , or do anything else")
 
 # ========== WEB SEARCH ==========
 def web_search(query):
     try:
+        webbrowser.open("https://www.google.com")
         url = f"https://www.google.com/search?q={query.replace(' ', '+')}"
         speak(f"Here’s what I found for {query} on Google.")
         webbrowser.open(url)
     except Exception:
         speak("Sorry sir, I was unable to perform a Google search.")
+        speak("Bother to try again Sir? , or do anything else")
 
 # ========== CHAT MODE ==========
 with open("chat_script.json", "r") as f:
@@ -312,6 +319,7 @@ def chat_mode():
 # ========== MAIN ==========
 if __name__ == "__main__":
     wish_user()
+    speak("Initializing Jarvis...")
     speak("I am your personal assistant Jarvis. Please tell me how may I help you")
     #speak("If you think why Sir named me  Jarvis, its because he is a fan of Iron Man and his AI assistant Jarvis. Also he is a coder and love coding. So he probably would have thought , wait, why not name it Jarvis. Haha ha ")
     #check_if_tester()
@@ -483,4 +491,5 @@ if __name__ == "__main__":
         
         else:
             speak("I am sorry, I didn't understand that command. Please try again.")
+
 
